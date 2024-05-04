@@ -45,3 +45,5 @@ for(let i=0;i<fr.length;i++)
       fr[i].style.backgroundColor = 'brown';
       fr[i].style.color = 'white';
   }
+
+
