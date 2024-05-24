@@ -27,8 +27,11 @@ function showUserOnScreen(obj) {
   childEle.textContent = obj.email + ' - ' + obj.username + ' - ' + obj.phone
   // parentEle.innerHTML += `<li>${obj.username} - ${obj.email} - ${obj.phone</li>`;
 
+ // adding delete functionality on the screen
+ let deletebtn = document.createElement('button');
+ deletebtn.textContent = 'delete'
 
-
-  
-
+ 
+ childEle.appendChild(deletebtn);
+ parentEle.appendChild(childEle);
 }
