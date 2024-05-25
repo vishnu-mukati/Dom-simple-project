@@ -30,7 +30,12 @@ function showUserOnScreen(obj) {
  // adding delete functionality on the screen
  let deletebtn = document.createElement('button');
  deletebtn.textContent = 'delete'
-
+  deletebtn.type = 'button';
+  deletebtn.value = 'Delete';
+  deletebtn.onclick = () =>{
+    localStorage.removeItem(obj.email);
+    parentEle.removeChild(childEle);
+  }
  
  childEle.appendChild(deletebtn);
  parentEle.appendChild(childEle);
