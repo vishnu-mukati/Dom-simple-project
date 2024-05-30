@@ -36,4 +36,23 @@ function handleFormSubmit(event) {
     }
     childEle.appendChild(deletebtn);
     parentEle.appendChild(childEle);
+
+
+  let editbtn = document.createElement('button');
+  let editbtntext = document.createTextNode('edit');
+  editbtn.type = 'button';
+  editbtn.value = 'Edit';
+  editbtn.appendChild(editbtntext);
+  editbtn.onclick = () => {
+
+    let storedObj = JSON.parse(localStorage.getItem(obj.email));
+    localStorage.removeItem(obj.email);
+    parentEle.removeChild(childEle);
+    let inputField = document.querySelectorAll('#username , #email , #phone');
+    inputField[0].value = storedObj.username;
+    inputField[1].value = storedObj.email;
+    inputField[2].value = storedObj.phone;
+
+  }
+  childEle.appendChild(editbtn);
   }
